@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreenActivity"
-    android:background="@color/green_07">
+    android:background="@color/blue_05">
 
     <View
         android:id="@+id/view1"
@@ -37,8 +37,14 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/splashAnimation"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/handshake_anim" />
@@ -47,8 +53,8 @@
         android:id="@+id/materialDivider1"
         android:layout_width="0dp"
         android:layout_height="5dp"
-        app:dividerColor="@color/green_06"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:dividerColor="@color/blue_02"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -57,11 +63,31 @@
         android:id="@+id/materialDivider2"
         android:layout_width="0dp"
         android:layout_height="5dp"
-        app:dividerColor="@color/green_06"
+        app:dividerColor="@color/blue_02"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider3"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        app:dividerColor="@color/blue_06"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider1" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider4"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        app:dividerColor="@color/blue_06"
+        app:layout_constraintBottom_toTopOf="@+id/materialDivider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <TextView
         android:id="@+id/textView"
@@ -69,7 +95,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/font_5"
         android:text="Wecure Wellness"
-        android:textColor="@color/green_01"
+        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

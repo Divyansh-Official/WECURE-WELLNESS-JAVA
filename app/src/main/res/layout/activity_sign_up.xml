@@ -6,39 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:background="@color/green_07">
+    android:background="#EAF1FF">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view1"
         android:layout_width="0.1dp"
         android:layout_height="0.1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/view2"
         android:layout_width="0.1dp"
         android:layout_height="0.1dp"
-        app:layout_constraintBottom_toTopOf="@+id/userSignUpButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
-
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:background="@drawable/signup_app_logo_bg"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/view4"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/userSignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,28 +38,45 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/handshake_anim" />
 
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider1"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        app:dividerColor="@color/blue_06"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider2"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="25dp"
+        app:dividerColor="@color/blue_06"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/userSignUpButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="-2dp"
-        android:clickable="true"
         android:background="@drawable/signup_user_container_bg"
-        app:layout_constraintBottom_toTopOf="@+id/view"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView">
+        app:layout_constraintTop_toBottomOf="@+id/view1">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
-            android:gravity="end"
             android:fontFamily="@font/font_1"
+            android:gravity="end"
             android:text="User Register"
-            android:textColor="@color/green_06"
+            android:textColor="@color/blue_06"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -79,17 +88,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/doctorSignUpButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="-2dp"
-        android:clickable="true"
         android:background="@drawable/signup_doctor_container_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view">
+        app:layout_constraintTop_toTopOf="@+id/view2">
 
         <TextView
             android:layout_width="match_parent"
@@ -98,7 +103,7 @@
             android:fontFamily="@font/font_1"
             android:gravity="start"
             android:text="Doctor Register"
-            android:textColor="@color/green_06"
+            android:textColor="@color/blue_06"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

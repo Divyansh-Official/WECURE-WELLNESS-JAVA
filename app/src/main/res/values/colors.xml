@@ -11,6 +11,15 @@
     <color name="green_05">#648C7C</color>
     <color name="green_06">#294949</color>
     <color name="green_07">#99D0B9</color>
+    <color name="green_08">#F6FFF9</color>
+
+
+    <color name="blue_01">#F0F3FA</color>
+    <color name="blue_02">#D5DEEF</color>
+    <color name="blue_03">#B1C9EF</color>
+    <color name="blue_04">#8AAEE0</color>
+    <color name="blue_05">#638ECB</color>
+    <color name="blue_06">#395886</color>
 
     <color name="grey_01">#E4EBEC</color>
     <color name="grey_02">#9CA4A4</color>

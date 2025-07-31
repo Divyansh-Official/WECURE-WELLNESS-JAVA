@@ -2,6 +2,7 @@ package com.wecurewellness.consultancy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
@@ -16,7 +17,7 @@ import com.wecurewellness.consultancy.databinding.ActivitySignUpBinding;
 public class SignUpActivity extends AppCompatActivity {
 
     ActivitySignUpBinding binding;
-    Animation user_register_anim, doctor_register_anim;
+    Animation user_register_anim, doctor_register_anim, divider_slide_up_anim, divider_slide_down_anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +38,48 @@ public class SignUpActivity extends AppCompatActivity {
         doctor_register_anim = AnimationUtils.loadAnimation(this, R.anim.signup_doctor_register_anim);
         binding.doctorSignUpButton.setAnimation(doctor_register_anim);
 
+        divider_slide_up_anim = AnimationUtils.loadAnimation(this, R.anim.signup_divider_slide_up_anim);
+        divider_slide_up_anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                // Optional: do something when animation starts
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                binding.materialDivider1.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                // Not needed here
+            }
+        });
+        binding.materialDivider1.startAnimation(divider_slide_up_anim);
+
+
+        divider_slide_down_anim = AnimationUtils.loadAnimation(this, R.anim.signup_divider_slide_down_anim);
+        divider_slide_down_anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                // Optional: do something when animation starts
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                binding.materialDivider2.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                // Not needed here
+            }
+        });
+        binding.materialDivider2.startAnimation(divider_slide_down_anim);
+
+
         binding.userSignUpButton.setOnClickListener(v -> {
-            Intent userSignUp = new Intent(SignUpActivity.this, UserSignUpActivity.class);
+            Intent userSignUp = new Intent(SignUpActivity.this, MainActivity.class);
             startActivity(userSignUp);
         });
 

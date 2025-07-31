@@ -42,6 +42,12 @@ public class SplashScreenActivity extends AppCompatActivity {
         divider_slide_left_anim = AnimationUtils.loadAnimation(this, R.anim.splashscreen_divider_slide_left_anim);
         binding.materialDivider2.setAnimation(divider_slide_left_anim);
 
+        divider_slide_left_anim = AnimationUtils.loadAnimation(this, R.anim.splashscreen_divider_slide_left_anim);
+        binding.materialDivider3.setAnimation(divider_slide_left_anim);
+
+        divider_slide_right_anim = AnimationUtils.loadAnimation(this, R.anim.splashscreen_divider_slide_right_anim);
+        binding.materialDivider4.setAnimation(divider_slide_right_anim);
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

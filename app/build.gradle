@@ -44,4 +44,5 @@ dependencies {
     androidTestImplementation libs.espresso.core
 
     implementation 'com.airbnb.android:lottie:6.6.6'
+
 }

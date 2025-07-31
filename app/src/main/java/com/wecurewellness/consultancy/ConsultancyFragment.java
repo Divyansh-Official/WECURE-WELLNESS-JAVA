@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CounsellingFragment#newInstance} factory method to
+ * Use the {@link ConsultancyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CounsellingFragment extends Fragment {
+public class ConsultancyFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class CounsellingFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CounsellingFragment() {
+    public ConsultancyFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class CounsellingFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CounsellingFragment.
+     * @return A new instance of fragment ConsultancyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CounsellingFragment newInstance(String param1, String param2) {
-        CounsellingFragment fragment = new CounsellingFragment();
+    public static ConsultancyFragment newInstance(String param1, String param2) {
+        ConsultancyFragment fragment = new ConsultancyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class CounsellingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_counselling, container, false);
+        return inflater.inflate(R.layout.fragment_consultancy, container, false);
     }
 }
