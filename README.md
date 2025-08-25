@@ -1,1 +1,1 @@
-# Wecure-Wellness
+# WECURE-WELLNESS
